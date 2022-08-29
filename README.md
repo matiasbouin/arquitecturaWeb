@@ -5,6 +5,8 @@
 
 Este fantabuloso repositorio de codigo pertenece a l@s unicos e inigualables Sophia Marquez Lisa y Angel Matias Bouin
 
+Nuestro trabajo va a estar orientado en una agenda to-do list :]
+
 **Hello, IT. Have you tried turning it off and on again?**
 
 ![image](https://user-images.githubusercontent.com/49533289/187111203-a64008bf-0a62-4dac-8b0c-bc07867aeb02.png)
