@@ -3,7 +3,7 @@
 
 *Bienvenid@ al mejor repo de la materia Arquitectura Web*
 
-Este fantabuloso repositorio de codigo pertenece a l@s unicos e inigualables Sophia Marquez Lisa y Angel Matias Bouin
+Este fantabuloso repositorio de codigo pertenece a l@s unic@s e inigualables Sophia Marquez Lisa y Angel Matias Bouin
 
 Nuestro trabajo va a estar orientado en una agenda to-do list :]
 
