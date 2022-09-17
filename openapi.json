@@ -1,0 +1,168 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "To Do List",
+    "description": "Basado en una To Do List para presentar la API que usaremos en nuestro trabajo practico.",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "apiteam@swagger.io"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version": "1.0.11"
+  },
+  "servers": [
+    {
+      "url": "https://todolist-example-server.io/api"
+    }
+  ],
+  "tags": [
+    {
+      "name": "nota",
+      "description": "notas"
+    }
+  ],
+  "paths": {
+    "/nota": {
+      "put": {
+        "tags": [
+          "nota"
+        ],
+        "summary": "Actualizar nota existente",
+        "description": "Actualizar una nota usando el Id",
+        "operationId": "actualizarNota",
+        "requestBody": {
+          "description": "Actualizar una nota existente del To Do List",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/nota"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/nota"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid ID supplied"
+          },
+          "404": {
+            "description": "Nota not found"
+          },
+          "405": {
+            "description": "Validation exception"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "nota"
+        ],
+        "summary": "Agregar nueva nota",
+        "description": "Agregar nueva nota",
+        "operationId": "addNote",
+        "requestBody": {
+          "description": "Crear one new nota",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/nota"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pet"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "nota"
+        ],
+        "summary": "Busco nota por Id",
+        "description": "buscar una nota especifica en base al id",
+        "operationId": "buscarNota",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "id values that need to be considered for filter",
+            "required": false,
+            "explode": true,
+            "schema": {
+              "type": "integer",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/nota"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid id value"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "nota"
+        ],
+        "summary": "Elimina nota",
+        "description": "Elimina nota",
+        "operationId": "deleteNota",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "header",
+            "description": "id de nota a eliminar",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "id de nota invalido"
+          }
+        }
+      }
+    }
+  }
+}
