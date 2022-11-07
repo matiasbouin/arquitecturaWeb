@@ -5,7 +5,7 @@
 
 Este fantabuloso repositorio de codigo pertenece a l@s unic@s e inigualables Sophia Lista y Angel Matias Bouin
 
-Nuestro trabajo va a estar orientado en una agenda to-do list :]
+Nuestro trabajo va a estar orientado en un tracker de mascotas :]
 
 **Hello, IT. Have you tried turning it off and on again?**
 
